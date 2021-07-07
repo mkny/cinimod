@@ -1,0 +1,10 @@
+{
+	"name": "@cinimod/tsconfig",
+	"version": "1.0.0",
+	"description": "Shared TypeScript config",
+	"license": "MIT",
+	"main": "tsconfig.json",
+	"files": [
+		"tsconfig.json"
+	]
+}

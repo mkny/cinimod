@@ -1,6 +1,15 @@
 {
   "name": "packs",
   "private": true,
+	"repository": "mkny/cinimod",
+	"author": {
+		"name": "Marcony Neves",
+		"email": "desenvolvedor@me.com",
+		"url": "https://cinimod.es"
+	},
+	"engines": {
+		"node": ">=12"
+	},
   "workspaces": [
     "packages/*"
   ],
