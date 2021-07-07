@@ -1,0 +1,16 @@
+{
+	"name": "@cinimod/use-async",
+	"version": "1.0.0",
+	"main": "dist/index.js",
+	"license": "MIT",
+	"scripts": {
+		"build": "rimraf dist && tsc",
+		"prepare": "npm run build"
+	},
+	"devDependencies": {
+		"@types/react": "^17.0.14",
+		"rimraf": "^3.0.2",
+		"ts-node": "^8.3.0",
+		"typescript": "~3.8.2"
+	}
+}
