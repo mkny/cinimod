@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"description": "Shared TypeScript config",
 	"license": "MIT",
+	"private": false,
 	"main": "tsconfig.json",
 	"files": [
 		"tsconfig.json"
