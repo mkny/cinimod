@@ -1,6 +1,6 @@
 {
-  "name": "packs",
-  "private": true,
+	"name": "packs",
+	"private": true,
 	"repository": "mkny/cinimod",
 	"author": {
 		"name": "Marcony Neves",
@@ -10,9 +10,12 @@
 	"engines": {
 		"node": ">=12"
 	},
-  "workspaces": [
-    "packages/*"
-  ],
-  "version": "1.0.0",
-  "license": "MIT"
+	"workspaces": [
+		"packages/*"
+	],
+	"version": "1.0.0",
+	"license": "MIT",
+	"devDependencies": {
+		"lerna": "^4.0.0"
+	}
 }
