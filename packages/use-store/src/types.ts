@@ -1,6 +1,6 @@
 export interface IContext {
 	set: (key: string | Record<string, any>, value?: any) => void;
-	get: <T = any>(key: string, defaultValue?: Partial<T>) => T;
+	get: <T = any>(key?: string, defaultValue?: Partial<T>) => T;
 	state: Record<string, any>;
 	dispatch: Function;
 }
