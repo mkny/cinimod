@@ -7,6 +7,12 @@
 		"build": "rimraf dist && tsc",
 		"prepare": "npm run build"
 	},
+	"dependencies": {
+		"@cinimod/tsconfig": "^1.0.0"
+	},
+	"peerDependencies": {
+		"react": ">=16.8.0"
+	},
 	"devDependencies": {
 		"@types/react": "^17.0.14",
 		"rimraf": "^3.0.2",
@@ -15,8 +21,5 @@
 	},
 	"files": [
 		"dist/*"
-	],
-	"dependencies": {
-		"@cinimod/tsconfig": "^1.0.0"
-	}
+	]
 }

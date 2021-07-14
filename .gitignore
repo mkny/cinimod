@@ -1,3 +1,9 @@
+# dependencies
 node_modules
+
+# production
 dist
+
+# lock files
 yarn.lock
+package-lock.json
