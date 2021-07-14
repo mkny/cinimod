@@ -9,6 +9,7 @@
     "version": {
       "allowBranch": [
         "main",
+        "master",
         "feature/*"
       ],
       "message": "chore(release): publish %s"
