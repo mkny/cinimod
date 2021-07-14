@@ -1,7 +1,7 @@
 import _reduce from "lodash.reduce";
 import _get from "lodash.get";
 
-import { IContext } from "./types";
+import { IContext, IUseStore } from "./types";
 import { useStoreContext } from "./context";
 
 const keyOrMapKey = (
@@ -27,8 +27,8 @@ const keyOrMapKey = (
 	}
 };
 
-const useStore = (initialPlacement: string = "") => {
-	const { state, set, get } = useStoreContext();
+const useStore: IUseStore = (initialPlacement = "") => {
+	const { state: stateContext, set, get, dispatch } = useStoreContext();
 
 	const setPlaced: IContext["set"] = (key, value) => {
 		if(!value && initialPlacement){
@@ -38,11 +38,19 @@ const useStore = (initialPlacement: string = "") => {
 		}
 	};
 
-	const statePlaced = initialPlacement
-		? _get(state, initialPlacement)
-		: state;
+	const getPlaced: IContext["get"] = (key, defaultValue) => {
+		const newKey = key ? (typeof key === "string" ? [key] : key)?.map(i => initialPlacement+"."+i) : initialPlacement;
+		
+		return get(newKey, defaultValue);
+	}
 
-	return { state: statePlaced, set: setPlaced, get };
+	const state = initialPlacement
+		? _get(stateContext, initialPlacement)
+		: stateContext;
+
+	const rootState = initialPlacement ? stateContext : undefined;
+
+	return { state, set: setPlaced, get: getPlaced, rootState, dispatch };
 };
 
 export default useStore;
