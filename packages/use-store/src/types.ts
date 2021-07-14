@@ -6,7 +6,9 @@ export interface IContext {
 	dispatch: Function;
 }
 
-export type IUseStore = <T = any>(initial: string) => Omit<IContext, "state"> & { state: T };
+export type IUseStore = <T = any>(
+	initial: string
+) => Omit<IContext, "state"> & { state: T };
 
 export enum ActionTypes {
 	SET_VALUE = "SET_VALUE"

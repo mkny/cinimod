@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0-alpha.0",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "packages": [
+    "packages/*"
+  ],
+  "command": {
+    "version": {
+      "allowBranch": [
+        "main",
+        "feature/*"
+      ],
+      "message": "chore(release): publish %s"
+    }
+  },
+  "ignoreChanges": [
+    "**/__fixtures__/**",
+    "**/__tests__/**",
+    "**/*.md"
+  ]
+}

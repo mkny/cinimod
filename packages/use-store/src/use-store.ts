@@ -31,7 +31,7 @@ const useStore: IUseStore = (initialPlacement = "") => {
 	const { state: stateContext, set, get, dispatch } = useStoreContext();
 
 	const setPlaced: IContext["set"] = (key, value) => {
-		if(!value && initialPlacement){
+		if (!value && initialPlacement) {
 			set(initialPlacement, key);
 		} else {
 			set(keyOrMapKey(key, initialPlacement), value);
@@ -39,10 +39,14 @@ const useStore: IUseStore = (initialPlacement = "") => {
 	};
 
 	const getPlaced: IContext["get"] = (key, defaultValue) => {
-		const newKey = key ? (typeof key === "string" ? [key] : key)?.map(i => initialPlacement+"."+i) : initialPlacement;
-		
+		const newKey = key
+			? (typeof key === "string" ? [key] : key)?.map(
+					i => `${initialPlacement}.${i}`
+			  )
+			: initialPlacement;
+
 		return get(newKey, defaultValue);
-	}
+	};
 
 	const state = initialPlacement
 		? _get(stateContext, initialPlacement)

@@ -1,16 +1,35 @@
 {
-	"name": "@cinimod/use-store",
-	"version": "1.0.5",
-	"main": "dist/index.js",
-	"license": "MIT",
-	"private": false,
-	"scripts": {
+  "name": "@cinimod/use-store",
+  "version": "1.0.0-alpha.0",
+  "description": "Use Store hook and functions",
+  "keywords": [
+    "store",
+    "context",
+    "hook",
+    "storage",
+    "state"
+  ],
+  "author": "Marcony Neves <marcony.neves@cvortex.io>",
+  "homepage": "https://github.com/mkny/cinimod#readme",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
 		"build": "rimraf dist && tsc",
 		"build:watch": "tsc -w",
 		"prepare": "npm run build"
-	},
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkny/cinimod.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mkny/cinimod/issues"
+  },
 	"dependencies": {
-		"@cinimod/tsconfig": "^1.0.0",
+		"@cinimod/tsconfig": "^1.0.0-alpha.0",
 		"lodash.get": "^4.4.2",
 		"lodash.map": "^4.6.0",
 		"lodash.reduce": "^4.6.0",
@@ -18,18 +37,5 @@
 	},
 	"peerDependencies": {
 		"react": ">=16.8.0"
-	},
-	"devDependencies": {
-		"@types/lodash.get": "^4.4.6",
-		"@types/lodash.map": "^4.6.13",
-		"@types/lodash.reduce": "^4.6.6",
-		"@types/lodash.set": "^4.3.6",
-		"@types/react": "^17.0.14",
-		"rimraf": "^3.0.2",
-		"ts-node": "^8.3.0",
-		"typescript": "~3.8.2"
-	},
-	"files": [
-		"dist/*"
-	]
+	}
 }

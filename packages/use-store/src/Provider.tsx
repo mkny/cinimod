@@ -24,7 +24,8 @@ function Provider({
 	}, []);
 
 	const get: IContext["get"] = useCallback(
-		(key = "", defaultValue) => key ? _get(state, key, defaultValue) : state,
+		(key = "", defaultValue) =>
+			key ? _get(state, key, defaultValue) : state,
 		[state]
 	);
 

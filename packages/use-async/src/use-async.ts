@@ -6,7 +6,7 @@ import { ReducerActions, ReducerState } from "./types";
 function useAsync<TData = any>(
 	asyncFunction?: (params?: any) => Promise<TData>,
 	immediate = false,
-	asyncTimeout=300
+	asyncTimeout = 300
 ) {
 	const [{ value, error, status }, dispatch] = useReducer<
 		Reducer<ReducerState<TData>, ReducerActions>

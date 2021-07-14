@@ -1,11 +1,24 @@
 {
-	"name": "@cinimod/tsconfig",
-	"version": "1.0.0",
-	"description": "Shared TypeScript config",
-	"license": "MIT",
-	"private": false,
-	"main": "tsconfig.json",
-	"files": [
-		"tsconfig.json"
-	]
+  "name": "@cinimod/tsconfig2",
+  "version": "1.0.0-alpha.0",
+  "description": "Shared typescript configs",
+  "keywords": [
+    "typescript",
+    "config",
+    "shared"
+  ],
+  "author": "Marcony Neves <marcony.neves@cvortex.io>",
+  "homepage": "https://github.com/mkny/cinimod#readme",
+  "license": "MIT",
+  "main": "tsconfig.json",
+  "files": [
+    "tsconfig.*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkny/cinimod.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mkny/cinimod/issues"
+  }
 }
