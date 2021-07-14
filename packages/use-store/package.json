@@ -1,6 +1,6 @@
 {
   "name": "@cinimod/use-store",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.1-alpha.0",
   "description": "Use Store hook and functions",
   "keywords": [
     "store",
@@ -17,9 +17,9 @@
     "dist"
   ],
   "scripts": {
-		"build": "rimraf dist && tsc",
-		"build:watch": "tsc -w",
-		"prepare": "npm run build"
+    "build": "rimraf dist && tsc",
+    "build:watch": "tsc -w",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -28,14 +28,14 @@
   "bugs": {
     "url": "https://github.com/mkny/cinimod/issues"
   },
-	"dependencies": {
-		"@cinimod/tsconfig": "^1.0.0-alpha.0",
-		"lodash.get": "^4.4.2",
-		"lodash.map": "^4.6.0",
-		"lodash.reduce": "^4.6.0",
-		"lodash.set": "^4.3.2"
-	},
-	"peerDependencies": {
-		"react": ">=16.8.0"
-	}
+  "dependencies": {
+    "@cinimod/tsconfig": "^1.0.1-alpha.0",
+    "lodash.get": "^4.4.2",
+    "lodash.map": "^4.6.0",
+    "lodash.reduce": "^4.6.0",
+    "lodash.set": "^4.3.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  }
 }

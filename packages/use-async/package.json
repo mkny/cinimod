@@ -1,36 +1,36 @@
 {
-  "name": "@cinimod/use-async",
-  "version": "1.0.0-alpha.0",
-  "description": "React hook for assynchronous calls, triggering Suspense api",
-  "keywords": [
-    "react",
-    "hook",
-    "suspense",
-    "async"
-  ],
-  "author": "Marcony Neves <marcony.neves@cvortex.io>",
-  "homepage": "https://github.com/mkny/cinimod#readme",
-  "license": "MIT",
-  "main": "dist/index.js",
-	"files": [
-		"dist/*"
-	],
-  "scripts": {
-		"build": "rimraf dist && tsc",
-		"build:watch": "tsc -w",
-		"prepare": "npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mkny/cinimod.git"
-  },
-  "bugs": {
-    "url": "https://github.com/mkny/cinimod/issues"
-  },
-	"dependencies": {
-		"@cinimod/tsconfig": "^1.0.0-alpha.0"
-	},
-	"peerDependencies": {
-		"react": ">=16.8.0"
-	}
+ "name": "@cinimod/use-async",
+ "version": "1.0.1-alpha.0",
+ "description": "React hook for assynchronous calls, triggering Suspense api",
+ "keywords": [
+  "react",
+  "hook",
+  "suspense",
+  "async"
+ ],
+ "author": "Marcony Neves <marcony.neves@cvortex.io>",
+ "homepage": "https://github.com/mkny/cinimod#readme",
+ "license": "MIT",
+ "main": "dist/index.js",
+ "files": [
+  "dist/*"
+ ],
+ "scripts": {
+  "build": "rimraf dist && tsc",
+  "build:watch": "tsc -w",
+  "prepare": "npm run build"
+ },
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/mkny/cinimod.git"
+ },
+ "bugs": {
+  "url": "https://github.com/mkny/cinimod/issues"
+ },
+ "dependencies": {
+  "@cinimod/tsconfig": "^1.0.1-alpha.0"
+ },
+ "peerDependencies": {
+  "react": ">=16.8.0"
+ }
 }
