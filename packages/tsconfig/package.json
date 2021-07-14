@@ -1,5 +1,5 @@
 {
-  "name": "@cinimod/tsconfig2",
+  "name": "@cinimod/tsconfig",
   "version": "1.0.0-alpha.0",
   "description": "Shared typescript configs",
   "keywords": [
