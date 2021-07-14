@@ -1,4 +1,5 @@
 import { createContext, useContext } from "react";
+
 import { IContext } from "./types";
 
 const storeContext = createContext<IContext>({
@@ -6,7 +7,7 @@ const storeContext = createContext<IContext>({
 	set: () => void 0,
 	get: (): any => void 0,
 	dispatch: () => {}
-})
+});
 
 const { Provider: StoreProvider } = storeContext;
 

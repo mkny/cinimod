@@ -1,9 +1,0 @@
-{
-	"extends": "@cinimod/tsconfig",
-	"compilerOptions": {
-    "outDir": "dist"
-	},
-  "include": [
-    "./src"
-  ]
-}
