@@ -9,7 +9,7 @@
 		"prepare": "npm run build"
 	},
 	"dependencies": {
-		"@cinimod/tsconfig": "^1.0.0"
+		"@cinimod/tsconfig": "^1.0.0-alpha.0"
 	},
 	"peerDependencies": {
 		"react": ">=16.8.0"
