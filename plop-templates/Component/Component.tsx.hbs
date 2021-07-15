@@ -1,0 +1,17 @@
+import React, { forwardRef } from "react";
+
+export interface {{pascalCase name}}Props {}
+
+/**
+ * {{pascalCase name}} description goes here
+ */
+const {{pascalCase name}} = forwardRef<any, {{pascalCase name}}Props>(
+	/**
+	 * Please, don't remove ref={ref}
+	 */
+	(props: {{pascalCase name}}Props, ref) => <div {...props} ref={ref} />
+);
+
+{{pascalCase name}}.displayName = "{{pascalCase name}}";
+
+export { {{pascalCase name}} as default, {{pascalCase name}} };

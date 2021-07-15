@@ -1,0 +1,11 @@
+import React from "react";
+
+import { render, screen } from "common/tests/testing-library/react";
+
+import {{pascalCase name}} from "../index";
+
+test("<{{pascalCase name}} /> render", () => {
+	render(<{{pascalCase name}}>Hello world</{{pascalCase name}}>);
+
+	expect(screen.getByText(/world/)).toBeInTheDocument();
+});

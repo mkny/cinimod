@@ -1,0 +1,23 @@
+import React from "react";
+import { Meta, Story } from "@storybook/react";
+
+import { {{pascalCase name}}Props } from "./{{pascalCase name}}";
+
+import Source from ".";
+
+export default {
+	title: "{{pascalCase hierarchy}}/{{pascalCase name}}",
+	component: Source
+} as Meta;
+
+const Template: Story<{{pascalCase name}}Props> = args => <Source {...args} />;
+
+export const {{pascalCase name}} = Template.bind({});
+
+/**
+ * Fill the desired props, and the controls functionality will automatically
+ * try to show mechanics similar to KNOBS, but without our intervention.
+ *
+ * If fail, read: https://storybook.js.org/docs/react/essentials/controls
+ */
+{{pascalCase name}}.args = {};
