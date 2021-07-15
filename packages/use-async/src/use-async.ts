@@ -4,7 +4,7 @@ import reducer, * as actions from "./reducer";
 import { ReducerActions, ReducerState } from "./types";
 
 function useAsync<TData = any>(
-	asyncFunction?: (params?: any) => Promise<TData>,
+	asyncFunction: (params?: any) => Promise<TData>,
 	immediate = false,
 	asyncTimeout = 300
 ) {
@@ -18,10 +18,6 @@ function useAsync<TData = any>(
 	// on every render, but only if asyncFunction changes.
 	const execute = useCallback(
 		(params?: any, onError: (reason: any) => void = () => {}) => {
-			if (!asyncFunction) {
-				return undefined;
-			}
-
 			dispatch(actions.setValue(undefined));
 			return asyncFunction(params)
 				.then(response => {
