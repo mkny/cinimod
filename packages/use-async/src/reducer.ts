@@ -40,7 +40,7 @@ function reducer(state: ReducerState, action: ReducerActions) {
 		[ActionTypes.SET_ERROR]: setErrorReducer
 	};
 
-	return actions[action.type](state, action.payload) ?? state;
+	return actions[action.type](state, action.payload);
 }
 
 export default reducer;
