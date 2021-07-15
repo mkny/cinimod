@@ -40,9 +40,9 @@ const useStore: IUseStore = (initialPlacement = "") => {
 
 	const getPlaced: IContext["get"] = (key, defaultValue) => {
 		const newKey = key
-			? (typeof key === "string" ? [key] : key)?.map(
-					i => `${initialPlacement}.${i}`
-			  )
+			? typeof key === "string"
+				? `${initialPlacement ? `${initialPlacement}.` : ""}${key}`
+				: [initialPlacement].concat(key)
 			: initialPlacement;
 
 		return get(newKey, defaultValue);

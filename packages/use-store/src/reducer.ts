@@ -28,7 +28,7 @@ const reducer = (state: ReducerState, action: ReducerActions) => {
 		[ActionTypes.SET_VALUE]: setValue
 	};
 
-	return states[action.type]?.(state, action.payload) ?? state;
+	return states[action.type](state, action.payload);
 };
 
 export default reducer;
