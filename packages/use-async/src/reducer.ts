@@ -6,7 +6,7 @@ const initialState: ReducerState = {
 
 const setError = (err?: Error) => ({
 	type: ActionTypes.SET_ERROR,
-	error: err
+	payload: { error: err?.message ?? err }
 });
 
 const setValue = (value?: ReducerState["value"]) => ({
@@ -29,7 +29,7 @@ const setValueReducer = (
 
 const setErrorReducer = (state: ReducerState, payload?: any): ReducerState => ({
 	...state,
-	error: payload,
+	error: payload.error,
 	value: undefined,
 	status: "error"
 });
@@ -40,7 +40,7 @@ function reducer(state: ReducerState, action: ReducerActions) {
 		[ActionTypes.SET_ERROR]: setErrorReducer
 	};
 
-	return actions[action.type](state, action.payload) ?? state;
+	return actions[action.type](state, action.payload);
 }
 
 export default reducer;

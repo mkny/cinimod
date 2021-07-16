@@ -7,7 +7,7 @@ export interface IContext {
 }
 
 export type IUseStore = <T = any>(
-	initial: string
+	initial?: string
 ) => Omit<IContext, "state"> & { state: T };
 
 export enum ActionTypes {
