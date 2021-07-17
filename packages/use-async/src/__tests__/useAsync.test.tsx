@@ -1,6 +1,15 @@
 import { act, renderHook } from "@testing-library/react-hooks";
+import {
+	fireEvent,
+	render,
+	screen,
+	waitForElementToBeRemoved
+} from "@testing-library/react";
+import React, { Suspense } from "react";
 
 import { useAsync } from "../index";
+
+const wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
 describe("useAsync test suite", () => {
 	it("should be able to execute async function", async () => {
@@ -56,5 +65,44 @@ describe("useAsync test suite", () => {
 		await waitForNextUpdate();
 
 		expect(result.current.error).toBe("non-formatted");
+	});
+	it("should throw Suspense's fallback and be able to recover app state", async () => {
+		const Component = () => {
+			const callback = () => wait(1000).then(() => "found");
+			// const callback = jest.fn().mockResolvedValue("found");
+			const { execute } = useAsync(callback, false);
+
+			return (
+				<div>
+					<div>hello world</div>
+					<button data-testid="btn-click" onClick={execute}>
+						click-me
+					</button>
+				</div>
+			);
+		};
+		const Container = () => (
+			<Suspense fallback={<h1>Loading</h1>}>
+				<Component />
+			</Suspense>
+		);
+
+		render(<Container />);
+
+		const btn = screen.getByTestId("btn-click");
+		fireEvent.click(btn);
+		const load = screen.getByText(/loading/gi);
+
+		expect(load).toBeInTheDocument();
+		expect(screen.getByText(/hello/gi).parentElement).toHaveStyle({
+			display: "none"
+		});
+
+		await waitForElementToBeRemoved(load);
+
+		expect(load).not.toBeInTheDocument();
+		expect(screen.getByText(/hello/gi).parentElement).toHaveStyle({
+			display: "block"
+		});
 	});
 });
