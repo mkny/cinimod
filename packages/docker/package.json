@@ -1,0 +1,19 @@
+{
+  "name": "@cinimod/docker",
+  "version": "1.0.1-alpha.0",
+  "description": "Docker image utilities",
+  "author": "Marcony Neves <marcony.neves@cvortex.io>",
+  "homepage": "https://github.com/mkny/cinimod#readme",
+  "license": "MIT",
+  "main": "react/Dockerfile",
+  "files": [
+    "react"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkny/cinimod.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mkny/cinimod/issues"
+  }
+}
