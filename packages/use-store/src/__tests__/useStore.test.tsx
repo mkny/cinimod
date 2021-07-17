@@ -3,6 +3,7 @@ import { act, renderHook } from "@testing-library/react-hooks";
 import { render, screen } from "@testing-library/react";
 
 import { withStore, Provider, useStore, useStoreContext } from "../index";
+import { MISSING_CONTEXT_ERROR } from "../context";
 
 const MockedComponent = (props: any) => <div {...props} />;
 
@@ -98,9 +99,9 @@ describe("useStore test suite", () => {
 	it("should be able to get default values (without provider)", () => {
 		const { result } = renderHook(() => useStoreContext());
 
-		expect(result.current.dispatch()).toBe(undefined);
-		expect(result.current.get()).toBe(void 0);
-		expect(result.current.set({})).toBe(void 0);
+		expect(() => result.current.dispatch()).toThrow(MISSING_CONTEXT_ERROR);
+		expect(() => result.current.get()).toThrow(MISSING_CONTEXT_ERROR);
+		expect(() => result.current.set({})).toThrow(MISSING_CONTEXT_ERROR);
 	});
 	it("should be able to snapshot", () => {
 		const MyComponent = () => {

@@ -2,11 +2,21 @@ import { createContext, useContext } from "react";
 
 import { IContext } from "./types";
 
+export const MISSING_CONTEXT_ERROR =
+	"Couldn't find a store context. Have you wrapped your app with 'StoreProvider'?";
 const storeContext = createContext<IContext>({
-	state: {},
-	set: () => void 0,
-	get: (): any => void 0,
-	dispatch: () => {}
+	get state(): any {
+		throw new Error(MISSING_CONTEXT_ERROR);
+	},
+	get set(): any {
+		throw new Error(MISSING_CONTEXT_ERROR);
+	},
+	get get(): any {
+		throw new Error(MISSING_CONTEXT_ERROR);
+	},
+	get dispatch(): any {
+		throw new Error(MISSING_CONTEXT_ERROR);
+	}
 });
 
 const { Provider: StoreProvider } = storeContext;
