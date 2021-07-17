@@ -1,6 +1,6 @@
 {
   "name": "@cinimod/use-store",
-  "version": "1.0.1-alpha.0",
+  "version": "1.0.2-alpha.0",
   "description": "Use Store hook and functions",
   "keywords": [
     "store",
@@ -52,6 +52,8 @@
     "jest": "^25.0"
   },
   "jest": {
-    "setupFilesAfterEnv": ["<rootDir>/jest-setup.ts"]
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest-setup.ts"
+    ]
   }
 }
