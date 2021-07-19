@@ -1,8 +1,7 @@
 {
   "extends": "@cinimod/tsconfig",
   "compilerOptions": {
-    "outDir": "dist",
-    "typeRoots": ["./src/types.d.ts"]
+    "outDir": "dist"
   },
   "exclude": [
     "**/__tests__/*"
