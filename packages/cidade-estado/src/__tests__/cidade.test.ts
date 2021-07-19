@@ -36,5 +36,5 @@ describe("cidades tests", () => {
 		await waitForNextUpdate();
 
 		expect(result.current.cidades).toHaveLength(AP_STATE_LENGTH);
-	});
+	}, 5000);
 });
