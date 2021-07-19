@@ -1,14 +1,7 @@
 {
-  "name": "@cinimod/use-store",
+  "name": "@cinimod/validator",
   "version": "1.0.2-alpha.0",
-  "description": "Use Store hook and functions",
-  "keywords": [
-    "store",
-    "context",
-    "hook",
-    "storage",
-    "state"
-  ],
+  "description": "Set of usefull validators, combined with yup and some libs",
   "author": "Marcony Neves <marcony.neves@cvortex.io>",
   "homepage": "https://github.com/mkny/cinimod#readme",
   "license": "MIT",
@@ -31,25 +24,11 @@
     "url": "https://github.com/mkny/cinimod/issues"
   },
   "dependencies": {
-    "@cinimod/tsconfig": "^1.0.1-alpha.0",
-    "lodash.get": "^4.4.2",
-    "lodash.map": "^4.6.0",
-    "lodash.reduce": "^4.6.0",
-    "lodash.set": "^4.3.2"
-  },
-  "peerDependencies": {
-    "react": ">=16.8.0"
+    "cpf-cnpj-validator": "^1.0.3",
+    "yup": "^0.32.9"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.6",
-    "@babel/preset-env": "^7.14.7",
-    "@babel/preset-react": "^7.14.5",
-    "@babel/preset-typescript": "^7.14.5",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.0.0",
-    "@testing-library/react-hooks": "^7.0.1",
-    "@types/jest": "^26.0.24",
-    "jest": "^25.0"
+    "@types/yup": "^0.29.13"
   },
   "jest": {
     "setupFilesAfterEnv": [
