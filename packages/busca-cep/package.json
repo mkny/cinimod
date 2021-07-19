@@ -1,6 +1,6 @@
 {
   "name": "@cinimod/busca-cep",
-  "version": "1.0.5-alpha.0",
+  "version": "1.0.6-alpha.0",
   "description": "Uses viaCEP api's to get CEP information",
   "author": "Marcony Neves <marcony.neves@cvortex.io>",
   "homepage": "https://github.com/mkny/cinimod#readme",
