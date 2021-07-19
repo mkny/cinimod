@@ -1,6 +1,6 @@
 {
  "name": "@cinimod/use-async",
- "version": "1.0.2-alpha.0",
+ "version": "1.0.3-alpha.0",
  "description": "React hook for assynchronous calls, triggering Suspense api",
  "keywords": [
   "react",
@@ -50,12 +50,12 @@
    "<rootDir>/jest-setup.ts"
   ],
   "coverageThreshold": {
-    "global": {
-      "branches": 80,
-      "functions": 80,
-      "lines": 80,
-      "statements": 80
-    }
+   "global": {
+    "branches": 80,
+    "functions": 80,
+    "lines": 80,
+    "statements": 80
+   }
   }
  }
 }
