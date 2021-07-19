@@ -6,6 +6,9 @@
     "packages/*"
   ],
   "command": {
+    "publish": {
+      "access": "public"
+    },
     "version": {
       "allowBranch": [
         "main",

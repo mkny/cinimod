@@ -1,6 +1,6 @@
 {
   "name": "@cinimod/cidade-estado",
-  "version": "1.0.3-alpha.0",
+  "version": "1.0.3-alpha.1",
   "description": "Services, helpers and hooks for consulting Cities and States on public domain (ibge)",
   "keywords": [
     "ibge",
