@@ -14,3 +14,4 @@ yup.addMethod(yup.string, "zipCode", zipCode);
 yup.addMethod(yup.string, "phone", phone);
 
 export default yup;
+export { yup };
