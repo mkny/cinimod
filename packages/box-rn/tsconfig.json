@@ -1,0 +1,12 @@
+{
+  "extends": "@cinimod/tsconfig",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "exclude": [
+    "**/__tests__/*"
+  ],
+  "include": [
+    "./src"
+  ]
+}
