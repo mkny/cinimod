@@ -9,6 +9,9 @@
  "files": [
   "dist"
  ],
+ "publishConfig": {
+   "access": "public"
+ },
  "repository": {
   "type": "git",
   "url": "git+ssh://git@github.com/mkny/cinimod.git"
