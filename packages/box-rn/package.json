@@ -1,6 +1,6 @@
 {
  "name": "@cinimod/box-rn",
- "version": "1.1.0",
+ "version": "1.1.1",
  "description": "Box component for RN",
  "author": "Marcony Neves <marconyneves@gmail.com>",
  "homepage": "https://github.com/mkny/cinimod#readme",
@@ -10,7 +10,7 @@
   "dist"
  ],
  "publishConfig": {
-   "access": "public"
+  "access": "public"
  },
  "repository": {
   "type": "git",
