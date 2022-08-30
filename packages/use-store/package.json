@@ -1,6 +1,6 @@
 {
   "name": "@cinimod/use-store",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Use Store hook and functions",
   "keywords": [
     "store",
@@ -31,7 +31,7 @@
     "url": "https://github.com/mkny/cinimod/issues"
   },
   "dependencies": {
-    "@cinimod/tsconfig": "^1.0.1-alpha.0",
+    "@cinimod/tsconfig": "^1.0.1",
     "lodash.get": "^4.4.2",
     "lodash.map": "^4.6.0",
     "lodash.reduce": "^4.6.0",

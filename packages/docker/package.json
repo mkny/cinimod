@@ -1,6 +1,6 @@
 {
   "name": "@cinimod/docker",
-  "version": "1.0.2-alpha.0",
+  "version": "1.0.2",
   "description": "Docker image utilities",
   "author": "Marcony Neves <marcony.neves@cvortex.io>",
   "homepage": "https://github.com/mkny/cinimod#readme",

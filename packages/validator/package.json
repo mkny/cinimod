@@ -1,6 +1,6 @@
 {
   "name": "@cinimod/validator",
-  "version": "1.0.3-alpha.0",
+  "version": "1.0.3",
   "description": "Set of usefull validators, combined with yup and some libs",
   "author": "Marcony Neves <marcony.neves@cvortex.io>",
   "homepage": "https://github.com/mkny/cinimod#readme",
