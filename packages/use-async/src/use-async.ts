@@ -38,9 +38,7 @@ function useAsync<TData = any>(
 	// Otherwise execute can be called later, such as
 	// in an onClick handler.
 	useEffect(() => {
-		if (immediate) {
-			execute();
-		}
+		immediate && execute();
 	}, [execute, immediate]);
 
 	const ret = { execute, status, value, error };
