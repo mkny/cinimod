@@ -5,7 +5,7 @@ import { ProviderProps } from "./types";
 
 const withStore =
 	(config?: ProviderProps) =>
-	(WrappedComponent: React.ComponentType<any>) =>
+	(WrappedComponent: React.FC<any>) =>
 	(props: any) =>
 		(
 			<Provider {...config}>

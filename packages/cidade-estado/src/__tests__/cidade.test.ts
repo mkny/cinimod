@@ -11,6 +11,8 @@ const AC_STATE_CITY_0 = {
 	value: "1200013"
 };
 
+const timeout = 5000;
+
 describe("cidades tests", () => {
 	it("should be able to get list of cidades", async () => {
 		expect.assertions(2);
@@ -18,23 +20,29 @@ describe("cidades tests", () => {
 		const cidades = await getCidades("AC");
 
 		expect(cidades).toHaveLength(AC_STATE_LENGTH);
-		expect(cidades?.[0]).toStrictEqual(AC_STATE_CITY_0);
-	});
-	it("should be able to get list of cidades, using the hook", async () => {
-		const { result, waitForNextUpdate } = renderHook(() =>
-			useCidades("AC")
+		expect(cidades).toStrictEqual(
+			expect.arrayContaining([AC_STATE_CITY_0])
 		);
+	});
+	it(
+		"should be able to get list of cidades, using the hook",
+		async () => {
+			const { result, waitForNextUpdate } = renderHook(() =>
+				useCidades("AC")
+			);
 
-		await waitForNextUpdate();
+			await waitForNextUpdate({ timeout });
 
-		expect(result.current.cidades).toHaveLength(AC_STATE_LENGTH);
+			expect(result.current.cidades).toHaveLength(AC_STATE_LENGTH);
 
-		act(() => {
-			result.current.fetch("AP");
-		});
+			act(() => {
+				result.current.fetch("AP");
+			});
 
-		await waitForNextUpdate();
+			await waitForNextUpdate({ timeout });
 
-		expect(result.current.cidades).toHaveLength(AP_STATE_LENGTH);
-	}, 5000);
+			expect(result.current.cidades).toHaveLength(AP_STATE_LENGTH);
+		},
+		timeout
+	);
 });

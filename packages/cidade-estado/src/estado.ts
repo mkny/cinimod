@@ -11,10 +11,21 @@ const getEstados = (): Promise<IEstadoWithPicker[]> =>
 		);
 
 const useEstados = (execute = true) => {
-	const [estados, setEstados] = useState<IEstado[]>([]);
+	const [estados, setEstados] = useState<IEstadoWithPicker[]>([]);
+	const [hasError, setHasError] = useState(false);
+	const [loading, setIsLoading] = useState(false);
 
 	const handleGetEstados = () => {
-		getEstados().then(setEstados);
+		setIsLoading(true);
+		setHasError(false);
+		getEstados()
+			.then(setEstados)
+			.catch(() => {
+				setHasError(true);
+			})
+			.finally(() => {
+				setIsLoading(false);
+			});
 	};
 
 	useEffect(() => {
@@ -22,7 +33,7 @@ const useEstados = (execute = true) => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
-	return { estados, fetch: handleGetEstados };
+	return { estados, fetch: handleGetEstados, loading, error: hasError };
 };
 
 export default getEstados;
