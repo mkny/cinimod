@@ -36,7 +36,7 @@
     "axios": "^0.21.1"
   },
   "peerDependencies": {
-    "react": ">=16.8.0"
+    "react": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
