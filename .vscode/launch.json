@@ -1,0 +1,34 @@
+{
+  "configurations": [
+    {
+      "name": "Debug tests watch mode",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "yarn",
+      "args": [
+        "workspace",
+        "${input:projectName}",
+        "test",
+        "--watch"
+      ],
+      "cwd": "${workspaceRoot}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "projectName",
+      "type": "pickString",
+      "description": "Chose project name",
+      "options": [
+        "@cinimod/box-rn",
+        "@cinimod/busca-cep",
+        "@cinimod/cidade-estado",
+        "@cinimod/use-async",
+        "@cinimod/use-store",
+        "@cinimod/validator"
+      ]
+    }
+  ]
+}
