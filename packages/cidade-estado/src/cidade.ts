@@ -17,15 +17,26 @@ const getCidades = (uf: string): Promise<ICidadeWithPicker[]> =>
 
 const useCidades = (uf: string) => {
 	const [cidades, setCidades] = useState<ICidadeWithPicker[]>();
+	const [hasError, setHasError] = useState(false);
+	const [loading, setIsLoading] = useState(false);
 
 	const handleGetCidades = (uf: string) => {
-		getCidades(uf).then(setCidades);
+		setIsLoading(true);
+		setHasError(false);
+		getCidades(uf)
+			.then(setCidades)
+			.catch(() => {
+				setHasError(true);
+			})
+			.finally(() => {
+				setIsLoading(false);
+			});
 	};
 	useEffect(() => {
 		uf && handleGetCidades(uf);
 	}, [uf]);
 
-	return { cidades, fetch: handleGetCidades };
+	return { cidades, fetch: handleGetCidades, loading, error: hasError };
 };
 
 export default getCidades;
