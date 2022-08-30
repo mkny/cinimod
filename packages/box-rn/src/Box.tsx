@@ -1,24 +1,7 @@
-import React, { ReactElement, PropsWithChildren } from "react";
-import { ViewProps } from "react-native";
-import {
-	FlexboxProps,
-	LayoutProps,
-	SpaceProps,
-	BorderProps,
-	ColorProps
-} from "styled-system";
+import React, { ReactElement } from "react";
 
 import { ViewStyled } from "./style";
-
-export interface BoxProps
-	extends PropsWithChildren<ViewProps>,
-		FlexboxProps,
-		SpaceProps,
-		LayoutProps,
-		BorderProps,
-		ColorProps {
-	as?: React.ElementType;
-}
+import { BoxProps } from "./types";
 
 function Box(props: BoxProps): ReactElement {
 	return <ViewStyled {...props} />;
