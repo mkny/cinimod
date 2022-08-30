@@ -1,6 +1,7 @@
 {
   "extends": "@cinimod/tsconfig",
   "compilerOptions": {
+    "jsx": "react-native",
     "outDir": "dist"
   },
   "exclude": [
