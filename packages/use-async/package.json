@@ -1,61 +1,62 @@
 {
- "name": "@cinimod/use-async",
- "version": "1.1.0",
- "description": "React hook for assynchronous calls, triggering Suspense api",
- "keywords": [
-  "react",
-  "hook",
-  "suspense",
-  "async"
- ],
- "author": "Marcony Neves <marcony.neves@cvortex.io>",
- "homepage": "https://github.com/mkny/cinimod#readme",
- "license": "MIT",
- "main": "dist/index.js",
- "files": [
-  "dist/*"
- ],
- "scripts": {
-  "build": "rimraf dist && tsc",
-  "build:watch": "tsc -w",
-  "test": "jest",
-  "prepare": "npm run build"
- },
- "repository": {
-  "type": "git",
-  "url": "git+https://github.com/mkny/cinimod.git"
- },
- "bugs": {
-  "url": "https://github.com/mkny/cinimod/issues"
- },
- "dependencies": {
-  "@cinimod/tsconfig": "^1.0.1-alpha.0"
- },
- "peerDependencies": {
-  "react": ">=16.8.0"
- },
- "devDependencies": {
-  "@babel/core": "^7.14.6",
-  "@babel/preset-env": "^7.14.7",
-  "@babel/preset-react": "^7.14.5",
-  "@babel/preset-typescript": "^7.14.5",
-  "@testing-library/jest-dom": "^5.14.1",
-  "@testing-library/react": "^12.0.0",
-  "@testing-library/react-hooks": "^7.0.1",
-  "@types/jest": "^26.0.24",
-  "jest": "^25.0"
- },
- "jest": {
-  "setupFilesAfterEnv": [
-   "<rootDir>/jest-setup.ts"
+  "name": "@cinimod/use-async",
+  "version": "1.1.0",
+  "description": "React hook for assynchronous calls, triggering Suspense api",
+  "keywords": [
+    "react",
+    "hook",
+    "suspense",
+    "async"
   ],
-  "coverageThreshold": {
-   "global": {
-    "branches": 80,
-    "functions": 80,
-    "lines": 80,
-    "statements": 80
-   }
+  "author": "Marcony Neves <marcony.neves@cvortex.io>",
+  "homepage": "https://github.com/mkny/cinimod#readme",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "build:watch": "tsc -w",
+    "test": "jest",
+    "test:watch": "yarn test --watch",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkny/cinimod.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mkny/cinimod/issues"
+  },
+  "dependencies": {
+    "@cinimod/tsconfig": "^1.0.1-alpha.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.14.5",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/react-hooks": "^7.0.1",
+    "@types/jest": "^26.0.24",
+    "jest": "^25.0"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest-setup.ts"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
   }
- }
 }
