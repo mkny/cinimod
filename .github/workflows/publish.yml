@@ -16,3 +16,5 @@ jobs:
     - run: yarn lerna publish --yes
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+# https://dev.to/xcanchal/automatic-versioning-in-a-lerna-monorepo-using-github-actions-4hij
+# Continue this job later
