@@ -7,10 +7,14 @@
   ],
   "command": {
     "publish": {
-      "access": "public",
-      "allowBranch": ["feature/*"]
+      "access": "public"
     },
     "version": {
+      "allowBranch": [
+        "main",
+        "master"
+      ],
+      "conventionalCommits": true,
       "message": "chore(release): publish %s"
     }
   },
