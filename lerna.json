@@ -1,5 +1,5 @@
 {
-  "version": "1.1.1",
+  "version": "independent",
   "npmClient": "yarn",
   "useWorkspaces": true,
   "packages": [
@@ -7,19 +7,17 @@
   ],
   "command": {
     "publish": {
-      "access": "public"
+      "access": "public",
+      "allowBranch": ["feature/*"]
     },
     "version": {
-      "allowBranch": [
-        "main",
-        "master"
-      ],
       "message": "chore(release): publish %s"
     }
   },
   "ignoreChanges": [
-    "**/__fixtures__/**",
+    "**/package.json",
+    "**/*.md",
     "**/__tests__/**",
-    "**/*.md"
+    "**/node_modules/**"
   ]
 }

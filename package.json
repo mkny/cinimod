@@ -21,6 +21,7 @@
 		"prepare": "husky install"
 	},
 	"devDependencies": {
+		"@commitlint/types": "^17.0.0",
 		"@types/lodash.get": "^4.4.6",
 		"@types/lodash.map": "^4.6.13",
 		"@types/lodash.reduce": "^4.6.6",
