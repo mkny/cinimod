@@ -12,5 +12,5 @@ jobs:
         node-version: 14.x
     - run: yarn install
     - run: yarn lerna publish --yes
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
